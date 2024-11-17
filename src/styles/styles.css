@@ -1,0 +1,284 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 0 15px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos dentro de la navbar se distribuyan bien */
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    flex-grow: 1; /* Asegura que la navbar ocupe el 100% del ancho disponible */
+}
+
+.navbar .cart-widget {
+    margin-left: auto; /* Esto mueve el carrito a la derecha */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustar icono del carrito */
+.cart-widget img {
+    width: 30px; /* Tamaño más grande del icono */
+    margin-right: 10px; /* Separación mayor del icono */
+}
+
+/* Estilo del icono de menú en la versión móvil */
+.navbar-toggler {
+    background-color: #0056b3;
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* Cambio a color blanco para mejor contraste */
+}
+
+/* Agregar algo de espacio adicional entre los enlaces de la navbar */
+.navbar .navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+/* Navbar collapse (menú móvil) */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end; /* Alineación a la derecha */
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Espaciado mayor entre elementos del menú */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px; /* Espaciado entre elementos del menú en pantallas pequeñas */
+    }
+}
+
+/* Item List */
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Card */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Item Detail */
+.item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-detail img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.item-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.item-detail p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Item Count */
+.item-count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.item-count button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.item-count button:hover {
+    background-color: #0056b3;
+}
+
+.item-count span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cart */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cart-item h4 {
+    margin-bottom: 5px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #b02a37;
+}
+
+/* Checkout Form */
+form {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Loader & Empty Messages */
+div {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+}
